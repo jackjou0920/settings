@@ -76,6 +76,6 @@ if [ "$PS1" ]; then
     # Turn on checkwinsize
     shopt -s checkwinsize
     #[ "$PS1" = "\\s-\\v\\\$ " ] && PS1="[\u@\h \W]\\$ "
-    PS1="\`if [ \$? = 0 ]; then echo \[\e[32m\]^o^\[\e[0m\]; else echo \[\e[31m\]T^T\[\e[0m\]; fi\` \e[1;34m\u@\h\e[0m \e[1;36m\@\e[0m
+    PS1="\`if [ \$? = 0 ]; then echo \[\e[32m\]^o^\[\e[0m\]; else echo \[\e[31m\]T^T\[\e[0m\]; fi\` \e[1;34m\u@\h\e[0m \e[1;36m\@\e[0m \[\e[1;35m\][${MYPS}]\[\e[0m\]~$ "
     #PS1="\u\e[38;05;199m@\e[0mMBP [\w] "
 fi
