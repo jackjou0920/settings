@@ -121,3 +121,51 @@ nmap <C-c> "+y
 vmap <C-v> "+gp
 nmap <C-v> "+gp
 
+syntax on
+
+set hlsearch "higrlight the search word
+set incsearch "search while typing
+set ignorecase "ignore lower or bigger case == /XXXX\c
+set smartcase "the -> THE, tHe, ...; The -> The
+
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+noremap <leader>x gt
+noremap <leader>z gT
+
+" ---------------------------------------
+" install plug tools
+" https://github.com/junegunn/vim-plug
+" :PlugInstall to install
+" ---------------------------------------
+
+call plug#begin()
+"Plug 'dense-analysis/ale'
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+"Plug 'Valloric/YouCompleteMe'
+call plug#end()
+
+" ---------------------------------------
+" YCM setting
+" https://github.com/ycm-core/YouCompleteMe
+" ---------------------------------------
+let g:ycm_confirm_extra_conf=0 "關閉載入.ycm_extra_conf.py提示
+let g:ycm_collect_identifiers_from_tags_files=1 " 開啟 YCM 基於標籤引擎
+let g:ycm_min_num_of_chars_for_completion=2 " 從第X個鍵入字元就開始羅列匹配項
+let g:ycm_cache_omnifunc=1 " 快取匹配項,每次都重新生成匹配項
+
+let g:ycm_show_diagnostics_ui = 0
+
+let g:ycm_seed_identifiers_with_syntax=1 " 語法關鍵字補全
+highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey
+highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
+
+
