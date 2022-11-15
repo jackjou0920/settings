@@ -147,11 +147,11 @@ noremap <leader>z gT
 " :PlugInstall to install
 " ---------------------------------------
 
-call plug#begin()
+"call plug#begin()
 "Plug 'dense-analysis/ale'
 "Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 "Plug 'Valloric/YouCompleteMe'
-call plug#end()
+"call plug#end()
 
 " ---------------------------------------
 " YCM setting
